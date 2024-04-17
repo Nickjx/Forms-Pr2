@@ -1,0 +1,174 @@
+/* space-grotesk-regular - latin */
+@font-face {
+  font-display: swap;
+  font-family: "Space Grotesk";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../assets/fonts/space-grotesk-v16-latin-regular.woff2") format("woff2");
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* space-grotesk-500 - latin */
+@font-face {
+  font-display: swap;
+  font-family: "Space Grotesk";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../assets/fonts/space-grotesk-v16-latin-500.woff2") format("woff2");
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+:root {
+  --main-color-deep-violet: #21092F;
+  --main-color-light-grey: #DFDEE0;
+  --main-color-white: #fff;
+  --main-grey-color: #2F2F2F;
+  --main-light-grey-color: #ADB5BE;
+}
+
+* {
+  box-sizing: border-box;
+  font-style: normal;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul {
+  margin: 0;
+}
+
+ul,
+ol,
+li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.container {
+  max-width: 1070px;
+  margin: 0px auto;
+  padding: 0px 10px;
+}
+
+body {
+  line-height: normal;
+  font-family: "Space Grotesk";
+  font-weight: 500;
+  background: url(../assets/img/bg-gradient.png) no-repeat left top/33% 100vh;
+}
+
+.flex {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+input {
+  color: inherit;
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+          appearance: none;
+}
+
+.component {
+  flex-direction: row;
+  padding-top: 187px;
+  justify-content: space-between;
+}
+
+.cards {
+  width: 541px;
+  row-gap: 37px;
+}
+
+.card-1,
+.card-2 {
+  border-radius: 10px;
+  width: 447px;
+  height: 245px;
+  color: var(--main-color-white);
+}
+
+.card-1 {
+  background: url(../assets/icon/circle-card.png) no-repeat 95px 40px, url(../assets/icon/oval-card.png) no-repeat 32px 28px, url(../assets/img/card-1-gradient-bg.png);
+  justify-content: flex-end;
+  row-gap: 25px;
+  padding: 27px 32px 27px 32px;
+}
+
+.card-1 span {
+  color: var(--main-color-white);
+  font-size: 28px;
+  font-weight: 500;
+  letter-spacing: 3.42px;
+}
+
+.input-element::-moz-placeholder {
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.name-number h2,
+.name-number span,
+.input-element::placeholder {
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.name-number {
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.card-2 {
+  align-self: flex-end;
+  padding: 23px 0px 0px 0px;
+  background: linear-gradient(169deg, #FFF 5%, #D2D3D9 91.69%);
+  position: relative;
+}
+
+.card-2::after {
+  content: url(../assets/icon/lines-decoration.svg);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: translate(132px, -47px);
+}
+
+.black-line {
+  width: 100%;
+  height: 54px;
+  background: var(--main-grey-color);
+  margin-bottom: 24px;
+}
+
+.input-element::-moz-placeholder {
+  color: var(--main-color-white);
+}
+
+.input-element::placeholder {
+  color: var(--main-color-white);
+}
+
+.input-element {
+  border-radius: 4px;
+  background: var(--main-light-grey-color);
+  padding: 10px 16px;
+  margin: 0px 43px;
+  outline: none;
+  border: none;
+  font-family: inherit;
+  color: inherit;
+  direction: rtl;
+}/*# sourceMappingURL=styles.css.map */
