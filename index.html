@@ -13,7 +13,14 @@
       <section class="component container flex">
         <article class="cards flex">
           <div class="card-1 flex">
-            <span>0000 0000 0000 0000</span>
+            <input
+              type="number"
+              id="number-card"
+              name="number-card"
+              form="form"
+              placeholder="0000 0000 0000 0000"
+              maxlength="19"
+            />
             <div class="name-number flex">
               <h2>JANE APPLESEED</h2>
               <span>00/00</span>
@@ -23,34 +30,44 @@
             <div class="black-line"></div>
             <input
               type="number"
-              name=""
-              form="form"
+              name="cvc"
+              id="input-element"
               class="input-element"
+              form="form"
               placeholder="000"
+              oninput="limitInput()"
             />
           </div>
         </article>
-        <form action="#" method="post" id="form">
-          <label for=""></label>
-          <input type="text" name="" id="" />
-          <label for=""></label>
-          <input type="text" name="" id="" maxlength="999" />
-
-          <div class="exp-date">
-            <div>
-              <label for=""></label>
-              <label for=""></label>
-            </div>
-            <input type="number" name="" id="" />
-            <input type="number" name="" id="" />
-          </div>
-          <div class="cvc flex">
-            <label for="">CVC </label>
-            <input type="number" name="cvc" id="cvc" />
+        <form action="#" method="post" id="form" name="form-card-value" class="credit-cards-info">
+          <fieldset class="input-form-name flex">
+            <label for="name"></label>
+            <input type="text" name="name" id="name" />
+          </fieldset>
+          <fieldset class="input-form-card-number">
+            <label for="card-number-form"></label>
+            <input type="number" name="card-number" id="card-number-form" />
+          </fieldset>
+          <div class="security-codes">
+            <fieldset class="flex">
+              <legend>
+                Exp. Date <label for="MM">( MM </label>/<label for="YY">
+                  YY )</label>
+              </legend>
+              <div>
+                <input type="number" name="months" id="MM" />
+                <input type="number" name="year" id="YY"/>
+              </div>
+            </fieldset>
+            <fieldset class="cvc-code">
+              <legend><label for="cvc">CVC</label></legend>
+              <input type="number" id="cvc" placeholder="e.g. 123"/>
+            </fieldset>
           </div>
         </form>
       </section>
     </main>
     <!-- <footer class="footer"></footer> -->
+    <script src="./assets/main.js"></script>
   </body>
 </html>
