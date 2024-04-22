@@ -20,6 +20,7 @@
               form="form"
               placeholder="0000 0000 0000 0000"
               maxlength="19"
+              
             />
             <div class="name-number flex">
               <h2>JANE APPLESEED</h2>
@@ -39,31 +40,40 @@
             />
           </div>
         </article>
-        <form action="#" method="post" id="form" name="form-card-value" class="credit-cards-info">
+        <form
+          action="#"
+          method="post"
+          id="form"
+          name="form-card-value"
+          class="credit-cards-info flex"
+          target="_blank"
+        >
           <fieldset class="input-form-name flex">
-            <label for="name"></label>
-            <input type="text" name="name" id="name" />
+            <legend><label for="name">Cardholder Name</label></legend>
+            <input type="text" name="name" id="name" placeholder="e.g. Jane Appleseed" />
           </fieldset>
           <fieldset class="input-form-card-number">
-            <label for="card-number-form"></label>
-            <input type="number" name="card-number" id="card-number-form" />
+            <legend><label for="card-number-form">Card Number</label></legend>
+            <input type="number" name="card-number" id="card-number-form" placeholder="e.g. 1234 5678 9123 0000" oninput="copyInputValue()" />
           </fieldset>
-          <div class="security-codes">
-            <fieldset class="flex">
+          <div class="security-codes flex">
+            <fieldset class="exp-date flex">
               <legend>
                 Exp. Date <label for="MM">( MM </label>/<label for="YY">
-                  YY )</label>
+                  YY )</label
+                >
               </legend>
-              <div>
-                <input type="number" name="months" id="MM" />
-                <input type="number" name="year" id="YY"/>
+              <div class="flex">
+                <input type="number" name="months" id="MM" placeholder="MM" />
+                <input type="number" name="year" id="YY" placeholder="YY" />
               </div>
             </fieldset>
             <fieldset class="cvc-code">
               <legend><label for="cvc">CVC</label></legend>
-              <input type="number" id="cvc" placeholder="e.g. 123"/>
+              <input type="number" id="cvc" placeholder="e.g. 123" />
             </fieldset>
           </div>
+          <button type="submit" form="form" onclick="alert('Your information was sent to the server in China !')">Confirm</button>
         </form>
       </section>
     </main>
