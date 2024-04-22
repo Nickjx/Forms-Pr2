@@ -1,3 +1,19 @@
+// -----------------------Animation-----------------------------
+@keyframes livitation {
+  0% {
+    transform: translateY(0px);
+  }
+  
+  50% {
+    transform: translateY(-5px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+
+}
+
 // -----------------------Fonts---------------------------------
 
 /* space-grotesk-regular - latin */
@@ -105,6 +121,7 @@ legend {
 .cards {
   width: 541px;
   row-gap: 37px;
+  animation: livitation 3s infinite alternate ;
 }
 
 .card-1,
@@ -215,13 +232,15 @@ div.security-codes {
   margin-bottom: 55px;
 }
 
-.input-form-card-number,.input-form-name{
-   margin-bottom: 26px;
+.input-form-card-number,
+.input-form-name {
+  margin-bottom: 26px;
 }
 
 form input:focus {
   outline: auto;
 }
+
 form input {
   width: 100%;
   color: var(--main-color-deep-violet);
@@ -255,8 +274,8 @@ form button[type="submit"] {
   transition: all 0.3s ease-in 100ms;
 }
 
-form button:hover{
-background-color: rgba(33, 9, 47, 0.792)
+form button:hover {
+  background-color: rgba(33, 9, 47, 0.792)
 }
 
 // fieldset input {

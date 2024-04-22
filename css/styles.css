@@ -1,3 +1,14 @@
+@keyframes livitation {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
 /* space-grotesk-regular - latin */
 @font-face {
   font-display: swap;
@@ -98,6 +109,7 @@ legend {
 .cards {
   width: 541px;
   row-gap: 37px;
+  animation: livitation 3s infinite alternate;
 }
 
 .card-1,
@@ -235,7 +247,8 @@ div.security-codes {
   margin-bottom: 55px;
 }
 
-.input-form-card-number, .input-form-name {
+.input-form-card-number,
+.input-form-name {
   margin-bottom: 26px;
 }
 
